@@ -1,4 +1,4 @@
-from models import db
+from . import db
 
 class BaseModel(db.Model):
     __abstract__ = True
@@ -13,10 +13,3 @@ class BaseModel(db.Model):
 
     def to_dict(self):
         return {c.name:getattr(self, c.name) for c in self.__table__.columns}
-
-    # def __init__(self, **kwargs):
-    #     for key,value in kwargs.items():
-    #         setattr(self, key, value)
-    
-    # def __repr__(self):
-    #     return f'<{self.__class__.__name__}{self.__dict__}>'

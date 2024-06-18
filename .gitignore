@@ -1,2 +1,4 @@
 venv
 source
+migrations
+__pycache__

@@ -1,5 +1,5 @@
 from flask import render_template, jsonify
-from models.item_model import get_all_items, create_item, update_item, delete_item, get_item
+from ...models.item_model import get_all_items, create_item, update_item, delete_item, get_item
 
 def index():
     items = get_all_items()

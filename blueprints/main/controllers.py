@@ -1,5 +1,5 @@
 from flask import Blueprint
-from blueprints.main.views import index, api_items, update_item_view, delete_item_view
+from .views import index, api_items, update_item_view, delete_item_view
 
 main_bp = Blueprint('main',  __name__)
 

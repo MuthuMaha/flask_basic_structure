@@ -1,18 +1,11 @@
-from models.base_model import BaseModel
-from models import db
+from .base_model import BaseModel
+from . import db
 
 class User(BaseModel):
     __tablename__ = 'users'
 
     name = db.Column(db.String(50), nullable=False)
     age = db.Column(db.Integer, nullable=False)
-#     def __init__(self, name, price):
-#         super().__init__(name=name, price=price)
-    
-# items = [
-#     Item('Apple', 1.0),
-#     Item('Banana',0.5)
-# ]
 
 def get_all_users():
     return User.query.all()
